@@ -1,0 +1,20 @@
+<div id="page">
+    <h1>Jamie's Totally Fair Cabin Chooser</h1>    
+    <form method="POST">
+        [% IF user %]
+        <p>Welcome back [% user.name %]. You chose [% user.choice %] the actual number was [% target %].</p>
+        <p>All of the choices so far:</p>
+        <ul>
+            [% FOR item IN everything.all  %]
+            <li>[% item.name %] picked [% item.choice %].</li>
+            [% END %]
+        </ul>
+        [% ELSE %]
+        <label>Your Name:</label>
+        <input type="text" name="user" value="" /><br/>
+        <label>Pick a Number Between 1 and 100:</label>
+        <input type="text" name="choice" value="" />
+        <input type="submit" />
+        [% END %]
+    </form>
+</div>

@@ -1,0 +1,11 @@
+
+<div id="page">
+    <h1>Jamie's Totally Fair Cabin Chooser</h1>    
+    <p>Hey there [% user.name %]. You chose [% user.choice %] the actual number was [% target %].</p>
+    <p>All of the choices so far:</p>
+    <ul>
+        [% FOR item IN everything.all  %]
+        <li>[% item.name %] picked [% item.choice %].</li>
+        [% END %]
+    </ul>
+</div>
